@@ -1,0 +1,69 @@
+#作者meteor qq是1627067320
+
+#papi变量列表
+#%redname_color% 颜色代码
+#%redname_prefix% 前缀称号
+
+#mysql数据库链接信息
+mysql:
+  url: 'jdbc:mysql://localhost:3306/test0'
+  user: 'root'
+  password: 'admin'
+#设置项
+Setting:
+  #拥有正义值玩家击杀非红名玩家扣除正义值
+  just-kill-player: 3
+  #拥有正义值的玩家击杀同样拥有正义值的玩家掉落的正义值（好好好绕
+  just-kill-just: 3
+  #高于该值身份将变更为 红名玩家
+  redname-points: 30
+  #击杀红名玩家增长正义值
+  kill-redname-points: 5
+  #击杀玩家增长杀戮值
+  kill-player-points: 5
+  #杀戮值值到达多少时掉落物品
+  drop-points: 30
+  #随机掉落物品几率
+  drop-chance: 40
+  #杀戮值到达多少关进监狱
+  jail-points: 40
+  #掉落金币百分比
+  drop-money: 0.2
+  #间隔多长时间扣除杀戮值(单位 :分钟
+  time-take-kill: 60
+  #扣除的杀戮值数
+  time-take-points: 1
+  #关入监狱执行指令
+  jail-cmd:
+    - 'jail @p@'
+    - 'say @p@ 你被抓辣！！'
+papi-hook:
+  normal:
+    color: '&f'
+    prefix: '市井小民'
+  red-name:
+    a:
+      color: '&b'
+      prefix: '蛇心蝎胆'
+      kill: 80
+    b:
+      color: '&9'
+      prefix: '恶贯满盈'
+      kill: 60
+    c:
+      color: '&1'
+      prefix: '蛇心蝎胆'
+      kill: 30
+  just-name:
+    a:
+      just: 30
+      color: '&b'
+      prefix: '正义的伙伴'
+    b:
+      just: 20
+      color: '&9'
+      prefix: '侠义之士'
+    c:
+      just: 15
+      color: '&6'
+      prefix: '拔刀相助'

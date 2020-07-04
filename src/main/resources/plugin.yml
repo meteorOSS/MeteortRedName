@@ -1,0 +1,13 @@
+name: RedName
+main: com.meteor.redname.RedName
+author: meteor
+version: 2.0
+depend:
+  - PlaceholderAPI
+  - Vault
+commands:
+  MeteorRedName:
+    aliases:
+      - mrn
+      - rn
+      - redname
